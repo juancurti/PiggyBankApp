@@ -12,5 +12,9 @@ class CustomTheme {
 
 
   static Color textHighlightColor = Color.fromRGBO(82, 154, 216, 1);
+
+  static Color positiveColor = Color.fromRGBO(3, 142, 25, 1);
+  static Color negativeColor = Color.fromRGBO(255, 0, 0, 1);
+
   static Color buttonColor = Color.fromRGBO(236, 149, 83, 1);
 }
