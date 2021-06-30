@@ -638,7 +638,176 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                       ),
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          showModalBottomSheet(context: context, 
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          builder: (context) {
+                            return Container(
+                              height: 700,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(34, 34, 34, 1),
+                                
+                              ),
+                              child: Column(
+                                
+                              children: [
+                                SizedBox(height: 20,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                                      'Buy or Swap', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Icon(Icons.close, color: Colors.white, size: 32),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 50,
+                                              height: 50,
+                                              child: Image.asset('assets/swap_vertical_circle.png')
+                                            ),
+                                            SizedBox(width: 10,),
+                                            Text(
+                                                      'Exchange', 
+                                                      style: TextStyle(
+                                                      color: Colors.black87,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.black87, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 40,
+                                              height: 40,
+                                              child: Image.asset('assets/1inch-1inch-logo.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      '1Inch', 
+                                                      style: TextStyle(
+                                                      color: Colors.black87,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.black87, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 40,
+                                              height: 40,
+                                              child: Image.asset('assets/pancakeswap-cake-logo.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Pancake', 
+                                                      style: TextStyle(
+                                                      color: Colors.black87,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.black87, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                                      ],
+                                                    )
+                            );
+                          });
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 5,
                           height: 50,
@@ -660,7 +829,265 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                       ),
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          showModalBottomSheet(context: context, 
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          builder: (context) {
+                            return Container(
+                              height: 700,
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(34, 34, 34, 1),
+                                
+                              ),
+                              child: Column(
+                                
+                              children: [
+                                SizedBox(height: 20,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                                      'Follow', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Icon(Icons.close, color: Colors.white, size: 32),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: CustomTheme.textHighlightColor,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 30,
+                                              height: 30,
+                                              child: Image.asset('assets/iconmonstr-telegram-1.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Telegram', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: CustomTheme.textHighlightColor,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 30,
+                                              height: 30,
+                                              child: Image.asset('assets/Discord-Logo-White.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Discord', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: CustomTheme.textHighlightColor,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 30,
+                                              height: 30,
+                                              child: Image.asset('assets/iconmonstr-twitter-1.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Twitter', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: CustomTheme.textHighlightColor,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 30,
+                                              height: 30,
+                                              child: Image.asset('assets/iconmonstr-instagram-11.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Instagram', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+
+                                SizedBox(height: 20,),
+                                InkWell(
+                                  onTap: (){},
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                      color: CustomTheme.textHighlightColor,
+                                      borderRadius: BorderRadius.circular(40)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            SizedBox(width: 20,),
+                                            Container(
+                                              width: 30,
+                                              height: 30,
+                                              child: Image.asset('assets/iconmonstr-globe-4.png')
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                                      'Website', 
+                                                      style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.w600
+                                                    ),
+                                                    ),
+                                          ],
+                                        ),
+                                        Row(
+                                          children: [
+                                            Icon(Icons.arrow_forward_sharp, color: Colors.white, size: 32),
+                                            SizedBox(width: 20,)
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                                      ],
+                                                    )
+                            );
+                          });
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 5,
                           height: 50,
