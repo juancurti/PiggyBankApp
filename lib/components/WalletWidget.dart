@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:piggybank/data/controller.dart';
 import 'package:piggybank/data/customtheme.dart';
+import 'package:piggybank/views/WalletScreen.dart';
 
 class WalletWidget extends StatefulWidget {
   WalletWidget({Key key}) : super(key: key);
@@ -27,7 +28,9 @@ class _WidgetState extends State<WalletWidget> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-                            onTap: (){},
+                            onTap: (){
+                              Get.to(WalletScreen(), curve: Curves.easeOut, duration: Duration(milliseconds: 500), transition: Transition.downToUp);
+                            },
                             child: Container(
                               width: (MediaQuery.of(context).size.width - 60) - 20,
                               height: 220,
