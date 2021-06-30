@@ -10,6 +10,7 @@ import 'package:piggybank/data/controller.dart';
 import 'package:piggybank/data/customtheme.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:piggybank/views/HomeScreen.dart';
+import 'package:piggybank/views/WalletAddScreen.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
 class WalletDeletionScreen extends StatefulWidget {
@@ -119,7 +120,7 @@ class _HomeScreenState extends State<WalletDeletionScreen> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  
+                                  Get.to(WalletAddScreen(), curve: Curves.easeOut, duration: Duration(milliseconds: 500), transition: Transition.downToUp);
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width * 0.9,

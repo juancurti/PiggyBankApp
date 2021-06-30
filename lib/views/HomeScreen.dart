@@ -10,6 +10,8 @@ import 'package:piggybank/data/controller.dart';
 import 'package:piggybank/data/customtheme.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
+import 'WalletAddScreen.dart';
+
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.currentIndex}) : super(key: key);
   final int currentIndex;
@@ -612,7 +614,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                       ),
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          Get.to(WalletAddScreen(), curve: Curves.easeOut, duration: Duration(milliseconds: 500), transition: Transition.downToUp);
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width / 5,
                           height: 50,
