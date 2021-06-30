@@ -9,17 +9,17 @@ import 'package:piggybank/components/WalletWidget.dart';
 import 'package:piggybank/data/controller.dart';
 import 'package:piggybank/data/customtheme.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:piggybank/views/WalletDeletionScreen.dart';
+import 'package:piggybank/views/HomeScreen.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 
-class WalletScreen extends StatefulWidget {
-  WalletScreen({Key key}) : super(key: key);
+class WalletDeletionScreen extends StatefulWidget {
+  WalletDeletionScreen({Key key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<WalletScreen> {
+class _HomeScreenState extends State<WalletDeletionScreen> {
   final ControllerSession appController = Get.find();
   String _thisAddress = '0x7286b5d154662F2caB38d9068450671f4Ea652ee';
   
@@ -80,105 +80,92 @@ class _HomeScreenState extends State<WalletScreen> {
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w600
                           ),),
-                          InkWell(
-                            onTap: () { 
-                                Get.to(WalletDeletionScreen(), curve: Curves.easeOut, duration: Duration(milliseconds: 500), transition: Transition.downToUp);
-                             },
-                            child: Icon(
-                              Icons.delete_outline,
-                              color: CustomTheme.negativeColor,
-                              size: 34,
-                            ),
-                          ),
+                          SizedBox(width: 20,)
                         ],
                       )
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 40,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          width: 220,
-                          height: 220,
+                          width: 180,
+                          height: 180,
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20)
+                            color: Color.fromRGBO(173, 41, 138, 1),
+                            borderRadius: BorderRadius.circular(10)
                           ),
-                          child: Center(child: PrettyQr(
-                          data: _thisAddress,
-                          size: 200,
-                          
-                        ),)
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.check_circle_outline, 
+                                color: Colors.white,
+                                size: 120,
+                              ),
+                              SizedBox(height: 10,),
+                              Text('DELETED', style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w500
+                                  )),
+                            ],
+                          ),
                         )
                       ],
                     ),
-                    SizedBox(height: 20,),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: CustomTheme.backgroundWidget,
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 20
-                      ),
-                      child: Text('My Wallet', style: TextStyle(
-                                    color: Colors.white.withAlpha(180),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500
-                                  )),
-                    ),
-                    SizedBox(height: 20,),
-                    Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        color: CustomTheme.backgroundWidget,
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 20
-                      ),
-                      child: Text(_thisAddress, style: TextStyle(
-                                    color: Colors.white.withAlpha(180),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500
-                                  )),
-                    ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 40,),
                     Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Clipboard.setData(ClipboardData(text: _thisAddress));
-                                  Get.snackbar('Address copied!', 'Address copied to clipboard', snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.white);
+                                  
                                 },
                                 child: Container(
-                                  width: 140,
-                                  height: 40,
+                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  height: 60,
                                   decoration: BoxDecoration(
                                     color: CustomTheme.textHighlightColor,
-                                    borderRadius: BorderRadius.circular(20)
+                                    borderRadius: BorderRadius.circular(30)
                                   ),
                                   child: Center(
-                                    child: Row(
-                                      children: [
-                                        SizedBox(width: 20,),
-                                        Icon(Icons.copy, color: Colors.white, size: 32,),
-                                        SizedBox(width: 10,),
-                                        Text(
-                                        'Copy',
+                                    child: Text(
+                                        'Connect Another Wallet?',
                                         style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700
                                         )
                                       ),
-                                      SizedBox(width: 10,)
-                                      ],
-                                    )
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 20,),
+                    Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              InkWell(
+                                onTap: () {
+                                  Get.off(HomeScreen(currentIndex: 0,));
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width * 0.9,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                    // color: CustomTheme.textHighlightColor,
+                                    borderRadius: BorderRadius.circular(30)
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                        'Go to Dashboard',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700
+                                        )
+                                      ),
                                   ),
                                 ),
                               )
